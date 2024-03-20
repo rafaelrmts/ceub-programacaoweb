@@ -1,9 +1,10 @@
 html {
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(211, 211, 211);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 div {
-    background-color: #fff;
+    background-color: #FFF;
     text-align: center;
     margin: 50px auto;
     max-width: 1100px;
@@ -14,7 +15,7 @@ div {
 }
 
 ol, ul {
-    background-color: #fff;
+    background-color: #FFF;
     width: 300px;
     height: 70px;
 }
@@ -23,3 +24,4 @@ li {
     margin-bottom: 5px;
     text-align: center;
 }
+
