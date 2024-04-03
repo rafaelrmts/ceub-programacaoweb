@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #e7e7e7;
+    background-color: #f0f0f0;
 }
 
 
@@ -30,9 +30,7 @@ input, select, button {
 
 #btn-submit, #btn-limpar {
     border: none;
-    transition: 1s;
-    
-   
+    transition: 0.5s;
 }
 
 #btn-submit {
@@ -62,12 +60,23 @@ input, select, button {
     border-radius: 2px;
 }
 
-
-
 .bi {
     font-size: 1rem;
-    padding: 0.2rem;
-    cursor: pointer;
+    cursor: pointer;    
+    color: #fff;
+} 
+
+#btn-inverter {
+    width: 5rem;
+    border: none;
+    background-color: #2E8B57;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+#btn-inverter:hover {
+    background-color: #247045;
+    border-radius: 2px;
 }
 
 #paragrafo-resultado {
