@@ -11,23 +11,24 @@
 <body>
     <div id="container">
         <h1 class="main-title">Conversor de moedas</h1>
-        <input type="number" id="valorEntrada">
+        <input type="number" id="valorEntrada" placeholder="0,00" required>
         
-        <select name="moeda1" id="firt-select">
+        <select name="moeda1" id="first-select">
             <option value="real">Real</option>
             <option value="dolar">Dólar</option>
             <option value="euro">Euro</option>
         </select>
-        <i class="bi bi-arrow-left-right" onclick="inverter();"></i> 
+        <i class="bi bi-arrow-left-right" id="btn-inverter"></i> 
         <!-- <button onclick="inverter();">Inverter</button> -->
         <select name="moeda2" id="second-select">
             <option value="real">Real</option>
-            <option value="dolar">Dólar</option>
+            <option value="dolar" selected>Dólar</option>
             <option value="euro">Euro</option>
         </select>
-        <button onclick="limpar();">Limpar</button>
-        <button onclick="converter();" id="submit">Converter</button>
+        <button id="btn-limpar">Limpar</button>
+        <button id="btn-submit">Converter</button>
         <p id="paragrafo-resultado"></p>
+        <p id="erro-converter"></p>
     </div>
    
     <script src="js/script.js"></script>
