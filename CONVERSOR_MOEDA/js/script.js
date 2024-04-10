@@ -26,6 +26,16 @@ botaoLimpar.addEventListener("click", limpar);
 const botaoConverter = document.getElementById("btn-submit");
 botaoConverter.addEventListener("click", converter);
 
+const botaoAceitarMensagem = document.getElementById("botao-aceita-mensagem");
+botaoAceitarMensagem.addEventListener("click", aceitarMensagem);
+
+function aceitarMensagem(){
+    const divMensagemUsuario = document.getElementById("mensagem-usuario");
+    divMensagemUsuario.classList.add("oculto")
+}
+//
+
+//
 let valorUsuario = document.getElementById("valorEntrada");
 valorUsuario.addEventListener("keypress", function(event){
     if(event.key == "Enter") {

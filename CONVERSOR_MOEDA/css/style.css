@@ -6,19 +6,25 @@
     font-family: "Montserrat", sans-serif;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     background-color: #e7e7e7;
+    min-height: 100vh;
 }
 
 
 #container {
-    border: 1px solid black;
+    -webkit-box-shadow: 1px 1px 13px 3px rgba(177, 177, 177, 0.64); 
+    box-shadow: 1px 1px 13px 3px rgba(78, 78, 78, 0.64);
     width: 50rem;
     height: 300px;
     margin: 5rem auto;
     padding: 20px;
     text-align: center;
-    background-color: #E0F2F1;
+    background-color: #cce0df;
 }
 
 input, select, button {
@@ -79,3 +85,24 @@ input, select, button {
     font-weight: 600;
 }
 
+#mensagem-usuario {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #c7c7c7;
+}
+
+#mensagem-usuario, p {
+    margin-top: 0.8rem;
+}
+
+button, #botao-aceitar-mensagem {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.oculto {
+    display: none;
+}
