@@ -1,0 +1,43 @@
+@media screen and (max-width: 430px) {
+  #container {
+    max-width: 80%;
+    height: 35rem;
+    display: grid;
+  }
+
+  #first-select {
+    margin-bottom: 2rem;
+  }
+
+  #second-select {
+    margin-bottom: 2rem;
+  }
+
+  #btn-submit {
+    display: flex;
+    background-color: #2e8b57;
+    color: #ffffff;
+    border-radius: 5px;
+    align-items: center;
+    
+  }
+
+  #btn-limpar {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .bi {
+    font-size: 1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #btn-inverter {
+    margin: 0 auto;
+  }
+
+}
