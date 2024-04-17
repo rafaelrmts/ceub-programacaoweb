@@ -58,7 +58,7 @@ valorUsuario.addEventListener("keypress", function(event){
 
 
 function converter() {
-    let historicoRecuperado = recuperarHistorico();
+    // let historicoRecuperado = recuperarHistorico();
 
 
     let valorUsuario = document.getElementById("valorEntrada").value;
@@ -98,9 +98,9 @@ function converter() {
     }
    
 
-    let objetoResultadoJSON = JSON.stringify(objetoResultado);
+    // let objetoResultadoJSON = JSON.stringify(objetoResultado);
 
-    salvarHistorico(objetoResultadoJSON);
+    salvarHistorico(objetoResultado);
 
     // localStorage.setItem("historico", objetoResultadoJSON);
 
