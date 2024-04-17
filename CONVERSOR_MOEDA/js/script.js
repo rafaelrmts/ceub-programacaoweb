@@ -29,9 +29,19 @@ botaoConverter.addEventListener("click", converter);
 const botaoAceitarMensagem = document.getElementById("botao-aceita-mensagem");
 botaoAceitarMensagem.addEventListener("click", aceitarMensagem);
 
+
+if(localStorage.getItem("aceitouCookie") == "1") {
+    const divMensagemUsuario = document.getElementById("mensagem-usuario");
+    divMensagemUsuario.classList.add("oculto");
+
+}
+
+
 function aceitarMensagem(){
     const divMensagemUsuario = document.getElementById("mensagem-usuario");
-    divMensagemUsuario.classList.add("oculto")
+    divMensagemUsuario.classList.add("oculto");
+
+    localStorage.setItem("aceitouCookie", "1");
 }
 //
 
@@ -48,13 +58,15 @@ valorUsuario.addEventListener("keypress", function(event){
 
 
 function converter() {
+    let historicoRecuperado = recuperarHistorico();
+
+
     let valorUsuario = document.getElementById("valorEntrada").value;
     let firtSelect = document.getElementById("first-select").value;
     let secondSelect = document.getElementById("second-select").value;
 
     let erroConverter = document.getElementById("erro-converter");
     erroConverter.textContent = "";
-
 
     if (firtSelect == secondSelect) {
         let paragrafoResultado = document.getElementById("paragrafo-resultado");
@@ -75,8 +87,48 @@ function converter() {
 
     let paragrafoResultado = document.getElementById("paragrafo-resultado");
     paragrafoResultado.textContent = simbolo + " " + resultado.toFixed(2);
+
+
+
+    let objetoResultado = {
+        valorDoUsuario: valorUsuario,
+        valorMoeda1: firtSelect,
+        valorMoeda2: secondSelect,
+        valorResultado: resultado
+    }
+   
+
+    let objetoResultadoJSON = JSON.stringify(objetoResultado);
+
+    salvarHistorico(objetoResultadoJSON);
+
+    // localStorage.setItem("historico", objetoResultadoJSON);
+
    
 }
+
+function recuperarHistorico() {
+    let historico = localStorage.getItem("historico");
+    
+    if (!historico) {
+        return  [];   
+    }
+
+    let historicoObjeto = JSON.parse(historico);
+
+    return historicoObjeto;
+
+}
+
+function salvarHistorico (conversao) {
+    let historico = recuperarHistorico();
+    historico.push(conversao);
+    localStorage.setItem("historico", JSON.stringify(historico))
+}
+
+
+
+
 
 
 
